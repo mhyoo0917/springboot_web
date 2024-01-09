@@ -23,9 +23,12 @@ version = '1.0-SNAPSHOT'
 repositories {
     mavenCentral()
 }
-
+tasks.withType(JavaCompile) {
+    options.compilerArgs << "-source" << "1.8" << "-target" << "1.8"
+}
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web' // 기존 compile -> deprecated -> implementation
+    implementation 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test' // 기존 testcompile
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
