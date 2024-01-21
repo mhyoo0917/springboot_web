@@ -9,12 +9,12 @@ public class HelloResponseDto {
     private String name = "";
     private int amount = 0;
 
-    public String getName(){
-        return name;
-    }
-    public int getAmount(){
-        return amount;
-    }
+//    public String getName(){
+//        return name;
+//    }
+//    public int getAmount(){
+//        return amount;
+//    }
     public HelloResponseDto(String name, int amount) {
         this.name = name;
         this.amount = amount;
